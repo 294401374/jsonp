@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>jsonp</title>
+	<script  src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+    // 得到航班信息查询结果后的回调函数
+    var flightHandler = function(data){
+        alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
+    };
+    // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
+    var url = "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&callback=flightHandler";
+    // var url ="http://libs.baidu.com/jquery/1.7.2/jquery.min.js";
+    // var url = 'http://www.baidu.com';
+    // 创建script标签，设置其属性
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    // 把script标签加入head，此时调用开始
+    // document.getElementsByTagName('head')[0].appendChild(script); 
+    // document.body.appendChild(script); 
+    // document.body.appendChild(script)
+    // $('body').append(script);
+    // alert(111);
+    // setTimeout(function() {
+    	// console.log(document.body.appendChild(script))
+    // }, 0)
+    // var haha = 'huhu_'+Math.random();
+    console.log(haha);
+    function haha(range){
+    	console.log(range);
+    }
+    haha(222);
+    var test = haha(111);
+    console.log(haha);
+    console.log(test);
+    </script>
+</head>
+<body>
+<h2>hahaha</h2>
+	<div id="cont">haha</div>
+</body>
+</html>
